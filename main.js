@@ -21,7 +21,6 @@ const getTime = () => {
 			localization.textContent = `IN ${yourLoc}`
 			timezone.textContent = abbreviation
 			const hrs = currentTime.substr(11, 2)
-			console.log(hrs)
 			if (hrs > 6 && hrs < 22) {
 				bgc.src = './assets/desktop/bg-image-daytime.jpg'
 				message.textContent = 'Good morning, its currently'
@@ -42,7 +41,6 @@ const getQuote = () => {
 			const random = Math.floor(Math.random() * data.length)
 			quote.textContent = data[random].text
 			author.textContent = data[random].author
-			console.log(data[random])
 		})
 }
 
