@@ -45,3 +45,7 @@ const getQuote = () => {
 getQuote()
 getTime()
 setInterval(getTime, 10000)
+
+btn.addEventListener('click', () => {
+	getQuote()
+})
