@@ -1,6 +1,8 @@
 # Clock-App-Frontend-mentor
 Clock application from frontend mentor challenges
 
+Its desktop version!
+
 features: 
 - update time every 10sec
 - time depends on your IP and localization
