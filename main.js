@@ -5,6 +5,7 @@ const timezone = document.querySelector('.abbreviation')
 const quote = document.querySelector('.quote')
 const btn = document.querySelector('.button')
 const author = document.querySelector('.author')
+const bgc = document.querySelector('.background-img')
 
 const getTime = () => {
 	const URL = 'http://worldtimeapi.org/api/ip'
@@ -18,6 +19,13 @@ const getTime = () => {
 			clock.textContent = currentTime.substr(11, 5)
 			localization.textContent = `IN ${yourLoc}`
 			timezone.textContent = abbreviation
+			const hrs = currentTime.substr(11, 2)
+			console.log(hrs)
+			if (hrs > 6 && hrs < 22) {
+				bgc.src = './assets/desktop/bg-image-daytime.jpg'
+			} else {
+				bgc.src = './assets/desktop/bg-image-nighttime.jpg'
+			}
 		})
 }
 
