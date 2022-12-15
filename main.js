@@ -1,11 +1,12 @@
 const clock = document.querySelector('.time')
 const localization = document.querySelector('.localization')
-const message = document.querySelector('.weather-message')
 const timezone = document.querySelector('.abbreviation')
 const quote = document.querySelector('.quote')
 const btn = document.querySelector('.button')
 const author = document.querySelector('.author')
 const bgc = document.querySelector('.background-img')
+const message = document.querySelector('.message')
+const weatherIcon = document.querySelector('.weather-icon')
 
 const getTime = () => {
 	const URL = 'https://worldtimeapi.org/api/ip'
@@ -23,8 +24,11 @@ const getTime = () => {
 			console.log(hrs)
 			if (hrs > 6 && hrs < 22) {
 				bgc.src = './assets/desktop/bg-image-daytime.jpg'
+				message.textContent = 'Good morning, its currently'
 			} else {
 				bgc.src = './assets/desktop/bg-image-nighttime.jpg'
+				message.textContent = 'Good night, its currently'
+				weatherIcon.src = './assets/desktop/icon-moon.svg'
 			}
 		})
 }

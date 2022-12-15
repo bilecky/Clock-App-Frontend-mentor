@@ -18,6 +18,7 @@ body {
   z-index: -10;
   height: 100vh;
   filter: brightness(40%);
+  border-left: none;
 }
 
 .quotes-container {
@@ -53,7 +54,7 @@ body {
 }
 
 .localization {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
 }
 
