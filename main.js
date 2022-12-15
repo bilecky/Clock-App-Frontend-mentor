@@ -8,7 +8,7 @@ const author = document.querySelector('.author')
 const bgc = document.querySelector('.background-img')
 
 const getTime = () => {
-	const URL = 'http://worldtimeapi.org/api/ip'
+	const URL = 'https://worldtimeapi.org/api/ip'
 
 	fetch(URL)
 		.then(response => response.json())
