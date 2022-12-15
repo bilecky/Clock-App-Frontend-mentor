@@ -24,6 +24,7 @@ const getTime = () => {
 			if (hrs > 6 && hrs < 22) {
 				bgc.src = './assets/desktop/bg-image-daytime.jpg'
 				message.textContent = 'Good morning, its currently'
+				weatherIcon.src = './assets/desktop/icon-sun.svg'
 			} else {
 				bgc.src = './assets/desktop/bg-image-nighttime.jpg'
 				message.textContent = 'Good night, its currently'
