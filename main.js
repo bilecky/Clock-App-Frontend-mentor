@@ -8,18 +8,13 @@ const getTime = () => {
 	fetch(URL)
 		.then(response => response.json())
 		.then(data => {
-			console.log(data)
-			console.log(data.unixtime)
-			const time = data.unixtime
-			const date = new Date(time * 1000)
-			const hours = date.getHours()
-			const minutes = `${date.getMinutes()}`
+			const currentTime = data.datetime
 			const abbreviation = data.abbreviation
-			setInterval(() => {
-				clock.textContent = `${hours}:${minutes}`
-				timezone.textContent = abbreviation
-			}, 1000)
+			const yourLoc = data.timezone
+			clock.textContent = currentTime.substr(11, 5)
+			localization.textContent = `IN ${yourLoc}`
+			timezone.textContent = abbreviation
 		})
 }
-
 getTime()
+setInterval(getTime, 10000)
