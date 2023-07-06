@@ -1,7 +1,7 @@
 # Clock-App-Frontend-mentor
 Clock application from frontend mentor challenges
 
-Its desktop version!
+## Its desktop version (no rwd)!
 
 features: 
 - update time every 10sec
